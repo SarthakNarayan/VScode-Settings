@@ -1,0 +1,99 @@
+{
+    "python.jediEnabled": false,
+
+    // Represents the zoom level of the window
+    "window.zoomLevel": 0,
+
+    // -----------------------------------------------------------------------
+    // git section
+    "git.enableSmartCommit": true,
+    // You will have to do manually
+    // $git fetch remote 
+    "git.autofetch": false,
+    "git.confirmSync": false,
+    // -----------------------------------------------------------------------
+
+    "workbench.startupEditor": "newUntitledFile",
+
+    // Python path
+    "python.pythonPath": "E:\\Anaconda\\envs\\DL\\python.exe",
+
+    // VSCode theme
+    "workbench.colorTheme": "Monokai",
+
+    // -----------------------------------------------------------------------
+    // linting and formatting
+    "python.formatting.provider": "autopep8",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
+    // "python.linting.pylintCategorySeverity.error": "Hint",
+    "python.linting.pylintArgs": [
+        "--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"
+        ],
+
+    // If not working run 
+    // pylint --generate-rcfile | out-file -encoding utf8 .pylintrc
+    // in the environment
+    // Also mentioned on the website
+    // -----------------------------------------------------------------------
+
+    // -----------------------------------------------------------------------
+    // ruler setting
+    // "editor.rulers": [78],
+    // "workbench.colorCustomizations": {
+    //     "editorRuler.foreground": "#ffffff"                                    
+    // },
+    // -----------------------------------------------------------------------
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"                          
+    },
+
+    // -----------------------------------------------------------------------
+    // Terminal related
+    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+    // This is done to use cmd as the base terminal with anaconda
+    // The & command just activates DL environment which I work on most of the times
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/K", 
+        "E:\\Anaconda\\Scripts\\activate.bat E:\\Anaconda & conda activate DL"],
+
+    // https://mscodingblog.blogspot.com/2017/08/setup-integrated-terminal-in-vs-code-to.html
+
+    "shellLauncher.shells.windows": [
+        {
+            "shell": "C:\\Windows\\System32\\cmd.exe",
+            "label": "cmd"
+        },
+        {
+            "shell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "label": "PowerShell"
+        },
+        {
+            "shell": "E:\\Git\\bin\\bash.exe",
+            "label": "Git bash"
+        }
+    ],
+    // -----------------------------------------------------------------------
+
+    // autosaving files
+    "files.autoSave": "afterDelay",
+
+    // -----------------------------------------------------------------------
+    // Related to docstrings
+    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.includeExtendedSummary": true,
+    // -----------------------------------------------------------------------
+
+    // -----------------------------------------------------------------------
+    // editor settings and word wrapping
+    "editor.suggestSelection": "first",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 78,
+    "editor.wrappingIndent": "deepIndent",
+    // -----------------------------------------------------------------------
+}
